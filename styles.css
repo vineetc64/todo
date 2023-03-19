@@ -116,7 +116,7 @@ img:hover
     list-style: none;
     padding-left: 0px;
 }
-.to-do-items li, .cpld li
+.to-do-items li
 {
     list-style: none;
     background-color: #353F41;
@@ -124,9 +124,22 @@ img:hover
     line-height: 25px;
     border-radius: 8px;
     padding: 5px;
-    padding-right: 120px;
+    padding-right: 85px;
     margin-bottom: 2px;
     position: relative;
+    overflow-wrap: break-word;
+}
+.cpld li
+{
+    list-style: none;
+    background-color: #353F41;
+    color: white;
+    line-height: 25px;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 2px;
+    position: relative;
+    overflow-wrap: break-word;
 }
 .to-do-items li i, .cpld li i
 {
@@ -163,11 +176,13 @@ hr
 .sc
 {
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 233px;
 }
 .cmp
 {
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 195px;
 }
 
