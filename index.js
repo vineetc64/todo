@@ -43,7 +43,6 @@ const addToDo = (item) => {
     var listItem = document.createElement("li");
     clname = "b"+btnitr;
     edname = "e"+btnitr;
-    listname = "l"+btnitr;
     listItem.innerHTML = `
     <p>
     ${item}
@@ -53,13 +52,15 @@ const addToDo = (item) => {
     <button id = "${clname}"><img src="images/icons/yes.png" alt="done-buttonimg"></button>
     </i>
     `;
+
+    listItem.classList.add("ladd");
     toDoBox.appendChild(listItem);
     var nwbtns = document.getElementById(`${clname}`);
     nwbtns.addEventListener("click",()=>{
         var txtcnt = nwbtns.parentElement.parentElement.innerText;
         const completed = document.createElement("li");
-        completed.innerHTML = 
-        txtcnt;
+        completed.innerHTML = txtcnt;
+        completed.classList.add("lremove");
         cmpBox.appendChild(completed);
         nwbtns.parentElement.parentElement.remove();
     })
@@ -76,9 +77,7 @@ const addToDo = (item) => {
 };
 
 
-// nwbtns.parentElement.parentElement.addEventListener("animationend",() =>{
-//     nwbtns.parentElement.parentElement.remove();
-// });
+
 
 
 
